@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timed Chat App</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <section class="panel intro" id="screen-welcome">
+        <h1>Chat </h1>
+        <p>Connect with someone for exactly 1 hour using a unique PIN</p>
+        <div class="actions">
+          <button id="btn-create" class="btn gradient">Create New Session</button>
+          <div class="join-row">
+            <input id="pin-input" placeholder="Enter 6-digit PIN" maxlength="6" />
+            <button id="btn-join" class="btn light">Join Existing Session</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel chat hidden" id="screen-chat">
+        <header class="chat-header">
+          <div>
+            <div class="label">Session:</div>
+            <div class="sub copyable" id="room-label" title="Click to copy room PIN">Waiting for second user...</div>
+          </div>
+          <div class="right">
+            <div id="timer" class="timer">60:00</div>
+            <button id="btn-leave" class="btn light small">Leave</button>
+          </div>
+        </header>
+        <main id="messages" class="messages"></main>
+        <footer class="composer">
+          <input id="message-input" placeholder="Type your message..." />
+          <button id="btn-send" class="btn gradient">Send</button>
+          <div class="upload">
+            <input id="image-input" type="file" accept="image/*" />
+            <label for="image-input" class="btn light full">Upload Image</label>
+          </div>
+        </footer>
+      </section>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+  </body>
+  </html>
+
+
