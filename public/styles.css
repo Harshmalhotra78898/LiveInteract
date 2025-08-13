@@ -24,9 +24,9 @@ body {
 
 .layout {
   display: grid;
-  grid-template-columns: 400px 1fr;
-  gap: 30px;
-  max-width: 1200px;
+  grid-template-columns: 500px 1fr;
+  gap: 40px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
 }
@@ -43,21 +43,25 @@ body {
 }
 
 .intro { 
-  padding: 40px; 
+  padding: 50px; 
   align-self: center;
   text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
 }
 
 .intro-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .logo {
-  font-size: 48px;
+  font-size: 56px;
   color: #667eea;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   background: linear-gradient(135deg, #667eea, #764ba2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -65,8 +69,8 @@ body {
 }
 
 .intro h1 { 
-  margin: 0 0 16px; 
-  font-size: 42px; 
+  margin: 0 0 20px; 
+  font-size: 48px; 
   font-weight: 800;
   background: linear-gradient(135deg, #667eea, #764ba2);
   -webkit-background-clip: text;
@@ -75,16 +79,16 @@ body {
 }
 
 .intro p { 
-  margin: 0 0 32px; 
+  margin: 0 0 40px; 
   color: #718096; 
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
-  max-width: 320px;
+  max-width: 380px;
 }
 
 .actions { 
   display: grid; 
-  gap: 24px; 
+  gap: 28px; 
   width: 100%;
 }
 
@@ -93,25 +97,25 @@ body {
 }
 
 .join-label {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 600;
   color: #64748b;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   text-align: center;
 }
 
 .join-row { 
   display: flex; 
-  gap: 12px; 
+  gap: 14px; 
   align-items: center;
 }
 
 input { 
-  padding: 14px 18px; 
+  padding: 16px 20px; 
   border: 2px solid #e2e8f0; 
   border-radius: 12px; 
   flex: 1; 
-  font-size: 14px;
+  font-size: 15px;
   transition: all 0.2s ease;
   background: #f8fafc;
 }
@@ -126,16 +130,16 @@ input:focus {
 .btn { 
   border: none; 
   border-radius: 12px; 
-  padding: 14px 20px; 
+  padding: 16px 24px; 
   font-weight: 600; 
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer; 
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
 }
 
@@ -178,8 +182,8 @@ input:focus {
 }
 
 .btn.small { 
-  padding: 10px 16px; 
-  font-size: 13px;
+  padding: 12px 18px; 
+  font-size: 14px;
 }
 
 .btn.full { 
@@ -192,11 +196,12 @@ input:focus {
   display: grid; 
   grid-template-rows: auto 1fr auto; 
   overflow: hidden;
-  height: 600px;
+  height: 650px;
+  min-width: 600px;
 }
 
 .chat-header { 
-  padding: 20px 24px; 
+  padding: 24px 28px; 
   display: flex; 
   justify-content: space-between; 
   align-items: center; 
@@ -218,48 +223,48 @@ input:focus {
 .session-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 6px;
 }
 
 .chat-header .label { 
   font-weight: 700; 
-  font-size: 14px;
+  font-size: 15px;
   opacity: 0.9;
 }
 
 .chat-header .sub { 
   opacity: 1; 
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .chat-header .right { 
   display: flex; 
   align-items: center; 
-  gap: 16px; 
+  gap: 18px; 
 }
 
 .timer { 
   background: rgba(255,255,255,0.15); 
-  padding: 8px 16px; 
+  padding: 10px 18px; 
   border-radius: 20px; 
   font-weight: 700;
-  font-size: 14px;
+  font-size: 15px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255,255,255,0.2);
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
 }
 
 .messages { 
-  padding: 20px; 
+  padding: 24px; 
   overflow: auto; 
   background: #fafbfc;
-  height: 400px;
+  height: 450px;
   display: flex;
   flex-direction: column;
 }
@@ -272,22 +277,24 @@ input:focus {
   height: 100%;
   color: #94a3b8;
   text-align: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .welcome-message i {
-  font-size: 48px;
+  font-size: 64px;
   opacity: 0.5;
 }
 
 .welcome-message p {
   margin: 0;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
+  max-width: 300px;
+  line-height: 1.5;
 }
 
 .message { 
-  margin: 16px 0; 
+  margin: 18px 0; 
   animation: fadeInUp 0.3s ease;
 }
 
@@ -303,15 +310,15 @@ input:focus {
 }
 
 .message .meta { 
-  font-size: 11px; 
+  font-size: 12px; 
   color: #94a3b8; 
-  margin-bottom: 6px; 
+  margin-bottom: 8px; 
   font-weight: 500;
 }
 
 .bubble { 
   background: white; 
-  padding: 12px 16px; 
+  padding: 14px 18px; 
   border-radius: 18px; 
   display: inline-block; 
   max-width: 75%; 
@@ -330,7 +337,7 @@ input:focus {
 }
 
 .message img { 
-  max-width: 300px; 
+  max-width: 350px; 
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
@@ -338,15 +345,15 @@ input:focus {
 .composer { 
   display: grid; 
   grid-template-columns: 1fr auto; 
-  gap: 16px; 
-  padding: 20px 24px; 
+  gap: 18px; 
+  padding: 24px 28px; 
   border-top: 1px solid #e2e8f0;
   background: white;
 }
 
 .input-group {
   display: flex;
-  gap: 12px;
+  gap: 14px;
   align-items: center;
 }
 
@@ -371,7 +378,7 @@ input:focus {
   bottom: 30px; 
   left: 50%; 
   transform: translateX(-50%); 
-  padding: 12px 20px; 
+  padding: 14px 24px; 
   border-radius: 12px; 
   color: white; 
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -380,7 +387,7 @@ input:focus {
   pointer-events: none; 
   transition: all 0.3s ease;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .toast.show { 
@@ -394,7 +401,7 @@ input:focus {
 
 /* Scrollbar */
 .messages::-webkit-scrollbar { 
-  width: 8px; 
+  width: 10px; 
 }
 
 .messages::-webkit-scrollbar-track { 
@@ -413,6 +420,14 @@ input:focus {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+  .layout {
+    grid-template-columns: 450px 1fr;
+    gap: 30px;
+    max-width: 1200px;
+  }
+}
+
 @media (max-width: 768px) {
   .layout {
     grid-template-columns: 1fr;
@@ -422,10 +437,12 @@ input:focus {
   
   .intro {
     padding: 30px 20px;
+    min-height: auto;
   }
   
   .chat {
     height: 500px;
+    min-width: auto;
   }
   
   .messages {
