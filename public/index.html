@@ -5,39 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Timed Chat App</title>
     <link rel="stylesheet" href="/styles.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   </head>
   <body>
     <div class="layout">
       <section class="panel intro" id="screen-welcome">
-        <h1>Chat </h1>
-        <p>Connect with someone for exactly 1 hour using a unique PIN</p>
-        <div class="actions">
-          <button id="btn-create" class="btn gradient">Create New Session</button>
-          <div class="join-row">
-            <input id="pin-input" placeholder="Enter 6-digit PIN" maxlength="6" />
-            <button id="btn-join" class="btn light">Join Existing Session</button>
+        <div class="intro-content">
+          <div class="logo">
+            <i class="fas fa-comments"></i>
+          </div>
+          <h1>Timed Chat</h1>
+          <p>Connect with someone for exactly 1 hour using a unique PIN. Perfect for quick conversations, study sessions, or time-limited meetings.</p>
+          <div class="actions">
+            <button id="btn-create" class="btn gradient">
+              <i class="fas fa-plus-circle"></i>
+              Create New Session
+            </button>
+            <div class="join-section">
+              <div class="join-label">Join Existing Session</div>
+              <div class="join-row">
+                <input id="pin-input" placeholder="Enter 6-digit PIN" maxlength="6" />
+                <button id="btn-join" class="btn light">
+                  <i class="fas fa-sign-in-alt"></i>
+                  Join
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       <section class="panel chat hidden" id="screen-chat">
         <header class="chat-header">
-          <div>
-            <div class="label">Session:</div>
-            <div class="sub copyable" id="room-label" title="Click to copy room PIN">Waiting for second user...</div>
+          <div class="session-info">
+            <div class="label">Session</div>
+            <div class="sub copyable" id="room-label" title="Click to copy room PIN">
+              <i class="fas fa-key"></i>
+              Waiting for second user...
+            </div>
           </div>
           <div class="right">
-            <div id="timer" class="timer">60:00</div>
-            <button id="btn-leave" class="btn light small">Leave</button>
+            <div id="timer" class="timer">
+              <i class="fas fa-clock"></i>
+              60:00
+            </div>
+            <button id="btn-leave" class="btn light small">
+              <i class="fas fa-sign-out-alt"></i>
+              Leave
+            </button>
           </div>
         </header>
-        <main id="messages" class="messages"></main>
+        <main id="messages" class="messages">
+          <div class="welcome-message">
+            <i class="fas fa-comment-dots"></i>
+            <p>Your chat session will begin when the second person joins...</p>
+          </div>
+        </main>
         <footer class="composer">
-          <input id="message-input" placeholder="Type your message..." />
-          <button id="btn-send" class="btn gradient">Send</button>
+          <div class="input-group">
+            <input id="message-input" placeholder="Type your message..." />
+            <button id="btn-send" class="btn gradient">
+              <i class="fas fa-paper-plane"></i>
+              Send
+            </button>
+          </div>
           <div class="upload">
             <input id="image-input" type="file" accept="image/*" />
-            <label for="image-input" class="btn light full">Upload Image</label>
+            <label for="image-input" class="btn light full">
+              <i class="fas fa-image"></i>
+              Upload Image
+            </label>
           </div>
         </footer>
       </section>
@@ -48,6 +85,6 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/app.js"></script>
   </body>
-  </html>
+</html>
 
 
